@@ -90,7 +90,7 @@ Right-click any image. The browser context menu contains the configured class en
 The module hooks into ProcessWire's `ready()` lifecycle:
 
 - **Admin pages** — assets are queued via `$config->scripts` and `$config->js()`. The AdminTheme outputs them as normal `<script>` tags in the page, never inside AJAX field fragments (which would break jQuery's `globalEval`).
-- **Frontend pages** — a `Page::render` hook injects the config object and a `<script src>` tag immediately before `</body>` on the fully rendered HTML, so the script is present before any TinyMCE instance initialises lazily on hover.
+- **Frontend pages** — a `Page::render` hook injects the config object and a `<script src>` tag on the fully rendered HTML, so the script is present before any TinyMCE instance initialises lazily on hover.
 
 The JavaScript uses `InputfieldTinyMCE.onSetup()` to register the UI for every editor instance: normal, inline, lazy-loaded, and frontend. A `setInterval` poll catches editors that initialise after the script itself loads.
 
