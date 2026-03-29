@@ -98,7 +98,7 @@ The JavaScript uses `InputfieldTinyMCE.onSetup()` to register the UI for every e
 
 ## License
 
-Licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/).
+Licensed under the MIT License.
 
 ---
 
