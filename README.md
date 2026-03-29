@@ -104,4 +104,4 @@ Licensed under the [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MP
 
 ## Credits
 
-Developed by [frameless.at](https://frameless.at).
+Developed by [frameless.at](https://frameless.at/en).
