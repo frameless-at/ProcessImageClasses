@@ -1,4 +1,6 @@
 <?php
+namespace ProcessWire;
+
 /**
  * ProcessImageClasses.module
  * Adds a configurable CSS class selector for images in TinyMCE and CKEditor.
