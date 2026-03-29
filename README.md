@@ -4,7 +4,7 @@ A ProcessWire module that adds a configurable CSS class selector for images insi
 
 ![Screenshot: TinyMCE in the frontend editor](img/Tiny_FE.png)
 
-When a user clicks an image inside a rich-text field a floating toolbar appears (TinyMCE) or the browser context menu is extended (CKEditor) with an **Image Style** picker. Classes are toggled directly on the `<img>` element; multiple classes can be active at the same time.
+When a user clicks an image inside a rich-text field a floating toolbar appears (TinyMCE) or the browser context menu is extended (CKEditor) with an **Image Style** picker. Classes are written directly into the <img> element in the saved HTML — no post-processing, no render-time magic. multiple classes can be active at the same time.
 
 ---
 
