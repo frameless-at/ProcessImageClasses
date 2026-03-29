@@ -4,7 +4,7 @@ A ProcessWire module that adds a configurable CSS class selector for images insi
 
 ![Screenshot: TinyMCE in the frontend editor](img/Tiny_FE.png)
 
-When a user clicks an image inside a rich-text field a floating toolbar appears (TinyMCE) or the browser context menu is extended (CKEditor) with an **Image Style** picker. Classes are written directly into the `<img>` element in the saved HTML — no post-processing, no render-time magic. multiple classes can be active at the same time.
+When a user clicks an image inside a rich-text field a floating toolbar appears (TinyMCE) or the browser context menu is extended (CKEditor) with an **Image Style** picker. Classes are written directly into the `<img>` element in the saved HTML — no post-processing, no render-time magic. Multiple classes can be active at the same time.
 
 ---
 
@@ -92,7 +92,7 @@ The module hooks into ProcessWire's `ready()` lifecycle:
 - **Admin pages** — assets are queued via `$config->scripts` and `$config->js()`. The AdminTheme outputs them as normal `<script>` tags in the page, never inside AJAX field fragments (which would break jQuery's `globalEval`).
 - **Frontend pages** — a `Page::render` hook injects the config object and a `<script src>` tag immediately before `</body>` on the fully rendered HTML, so the script is present before any TinyMCE instance initialises lazily on hover.
 
-The JavaScript uses `InputfieldTinyMCE.onSetup()` — ProcessWire's official callback API — to register the UI for every editor instance: normal, inline, lazy-loaded, and frontend. A `setInterval` poll catches editors that initialise after the script itself loads (AJAX race condition in the frontend editor).
+The JavaScript uses `InputfieldTinyMCE.onSetup()` to register the UI for every editor instance: normal, inline, lazy-loaded, and frontend. A `setInterval` poll catches editors that initialise after the script itself loads.
 
 ---
 
